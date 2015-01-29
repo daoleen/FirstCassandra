@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.6
+
+repositories() {
+   mavenCentral()
+}
+
+dependencies() {
+   compile 'com.datastax.cassandra:cassandra-driver-core:2.1.4'
+}
+
+idea {
+   module {
+      downloadSources = true
+      downloadJavadoc = true
+   }
+}
